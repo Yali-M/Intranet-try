@@ -1,0 +1,127 @@
+
+intranet/
+├─ app/
+│  ├─ Console/Commands
+│  ├─ Events
+│  ├─ Facades
+│  ├─ Http/
+│  │  ├─ Controllers/
+│  │  │  ├─ Admin/
+│  │  │  ├─ Api/
+│  │  │  ├─ Auth/
+│  │  │  ├─ KanbanController.php
+│  │  │  ├─ ValorisController.php
+│  │  │  └─ OutilsController.php
+│  │  ├─ Middleware/
+│  │  │  ├─ Connected.php
+│  │  │  ├─ SsoMiddleware.php
+│  │  │  └─ OutilsApiMiddleware.php
+│  │  └─ Requests/
+│  ├─ Jobs/
+│  ├─ Domains/
+│  │  ├─ Kanban/
+│  │  │  ├─ Models/
+│  │  │  ├─ Services/
+│  │  │  └─ Actions/
+│  │  ├─ RH/
+│  │  │  ├─ Models/
+│  │  │  ├─ Services/
+│  │  │  └─ Actions/
+│  │  ├─ Valoris/
+│  │  │  ├─ Models/
+│  │  │  │   ├─ ValorisProduit.php
+│  │  │  │   ├─ ValorisAchat.php
+│  │  │  │   ├─ ValorisHistory.php
+│  │  │  │   ├─ ValorisDeclaration.php
+│  │  │  │   └─ ValorisDeclarationMembre.php
+│  │  │  ├─ Services/
+│  │  │  │   ├─ PointsService.php
+│  │  │  │   ├─ ShopService.php
+│  │  │  │   └─ DeclarationService.php
+│  │  │  ├─ Actions/
+│  │  │  │   ├─ AddMonthlyPoints.php
+│  │  │  │   ├─ RedeemGoodie.php
+│  │  │  │   └─ SubmitDeclaration.php
+│  │  │  └─ Policies/
+│  │  │      ├─ PointsPolicy.php
+│  │  │      └─ ShopPolicy.php
+│  │  ├─ Outils/
+│  │  │  └─ Models/Services...
+│  │  └─ System/
+│  │      └─ Services/
+│  ├─ Livewire/
+│  │  ├─ Kanban/
+│  │  │  ├─ Index.php
+│  │  │  ├─ Create.php
+│  │  │  └─ Show.php
+│  │  ├─ RH/
+│  │  │  ├─ Absences/
+│  │  │  │   └─ Liste.php
+│  │  │  └─ Benevoles/
+│  │  │      └─ ListeUtilisateurs.php
+│  │  ├─ Valoris/
+│  │  │  ├─ Dashboard.php
+│  │  │  ├─ Points/
+│  │  │  │   ├─ Balance.php
+│  │  │  │   └─ History.php
+│  │  │  ├─ Shop/
+│  │  │  │   ├─ Catalog.php
+│  │  │  │   ├─ Product.php
+│  │  │  │   └─ Orders.php
+│  │  │  ├─ Declarations/
+│  │  │  │   ├─ Create.php
+│  │  │  │   └─ List.php
+│  │  │  └─ Admin/
+│  │  │      ├─ Products.php
+│  │  │      ├─ Orders.php
+│  │  │      └─ PointsManagement.php
+│  ├─ Mail/
+│  ├─ Models/
+│  ├─ Notifications/
+│  ├─ Policies/
+│  ├─ Providers/
+│  ├─ Services/
+│  └─ View/Components/
+├─ bootstrap/
+├─ config/
+├─ database/
+│  ├─ migrations/
+│  │   ├─ 0001_01_01_000000_create_users_table.php
+│  │   ├─ 2025_04_10_171431_create_valoris_declarations_table.php
+│  │   └─ ... (toutes les autres migrations)
+│  └─ seeders/
+├─ docs/
+├─ lang/
+├─ public/
+├─ resources/
+│  ├─ views/
+│  │   ├─ livewire/
+│  │   │   ├─ valoris/
+│  │   │   ├─ kanban/
+│  │   │   └─ rh/
+│  │   └─ layouts/
+│  ├─ js/
+│  └─ css/
+├─ routes/
+│  ├─ web.php
+│  └─ api.php
+├─ storage/
+├─ tests/
+│  ├─ Feature/
+│  └─ Unit/
+├─ .editorconfig
+├─ .env.example
+├─ .gitattributes
+├─ .gitignore
+├─ README.md
+├─ artisan
+├─ composer.json
+├─ package.json
+├─ package-lock.json
+├─ phpunit.xml
+├─ postcss.config.js
+├─ docker-compose.yml
+└─ .github/
+    └─ workflows/
+        ├─ ci.yml
+        └─ cd.yml
