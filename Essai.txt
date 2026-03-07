@@ -1,5 +1,208 @@
 
 intranet/
+│
+├─ app/
+│  ├─ Console/
+│  │  └─ Commands/
+│  │      ├─ SyncUsersFromAzure.php
+│  │      ├─ SyncUsersFromKeycloak.php
+│  │      └─ ValorisMonthlyPoints.php
+│  │
+│  ├─ Events/
+│  │  ├─ PointsCredited.php
+│  │  ├─ GoodiePurchased.php
+│  │  └─ TaskStatusChanged.php
+│  │
+│  ├─ Facades/
+│  │  ├─ Teams.php
+│  │  ├─ Mattermost.php
+│  │  └─ Sharepoint.php
+│  │
+│  ├─ Http/
+│  │  ├─ Controllers/
+│  │  │  ├─ Admin/
+│  │  │  │   ├─ UsersController.php
+│  │  │  │   ├─ RolesController.php
+│  │  │  │   ├─ ValorisAdminController.php
+│  │  │  │   └─ SystemController.php
+│  │  │  │
+│  │  │  ├─ Api/
+│  │  │  │   ├─ KanbanApiController.php
+│  │  │  │   ├─ ValorisApiController.php
+│  │  │  │   └─ RhApiController.php
+│  │  │  │
+│  │  │  ├─ Auth/
+│  │  │  │   ├─ LoginController.php
+│  │  │  │   ├─ LogoutController.php
+│  │  │  │   └─ SsoCallbackController.php
+│  │  │  │
+│  │  │  ├─ KanbanController.php
+│  │  │  ├─ ValorisController.php
+│  │  │  └─ OutilsController.php
+│  │  │
+│  │  ├─ Middleware/
+│  │  │  ├─ Connected.php
+│  │  │  ├─ SsoMiddleware.php
+│  │  │  ├─ AdminMiddleware.php
+│  │  │  └─ OutilsApiMiddleware.php
+│  │  │
+│  │  └─ Requests/
+│  │
+│  ├─ Jobs/
+│  │  ├─ SendTeamsNotification.php
+│  │  ├─ SendMattermostNotification.php
+│  │  └─ SyncSharepointDocuments.php
+│  │
+│  ├─ Livewire/
+│  │  ├─ Kanban/
+│  │  │  ├─ Board.php
+│  │  │  ├─ Task.php
+│  │  │  └─ CreateTask.php
+│  │  │
+│  │  ├─ RH/
+│  │  │  ├─ Absences/
+│  │  │  │   ├─ Liste.php
+│  │  │  │   └─ Demande.php
+│  │  │  │
+│  │  │  ├─ Benevoles/
+│  │  │  │   └─ ListeUtilisateurs.php
+│  │  │  │
+│  │  │  └─ Recrutement/
+│  │  │      ├─ Campagnes.php
+│  │  │      └─ Candidatures.php
+│  │  │
+│  │  ├─ Valoris/
+│  │  │  ├─ Dashboard.php
+│  │  │  │
+│  │  │  ├─ Points/
+│  │  │  │   ├─ Balance.php
+│  │  │  │   └─ History.php
+│  │  │  │
+│  │  │  ├─ Shop/
+│  │  │  │   ├─ Catalog.php
+│  │  │  │   ├─ Product.php
+│  │  │  │   └─ Orders.php
+│  │  │  │
+│  │  │  ├─ Declarations/
+│  │  │  │   ├─ Create.php
+│  │  │  │   └─ List.php
+│  │  │  │
+│  │  │  └─ Admin/
+│  │  │      ├─ Products.php
+│  │  │      ├─ Orders.php
+│  │  │      └─ PointsManagement.php
+│  │  │
+│  │  └─ System/
+│  │      ├─ HeaderNav.php
+│  │      ├─ SearchUser.php
+│  │      └─ Notifications.php
+│  │
+│  ├─ Models/
+│  │  ├─ User.php
+│  │  ├─ Kanboard.php
+│  │  ├─ KanboardColonne.php
+│  │  ├─ KanboardTache.php
+│  │  │
+│  │  ├─ ValorisProduit.php
+│  │  ├─ ValorisAchat.php
+│  │  ├─ ValorisHistory.php
+│  │  ├─ ValorisDeclaration.php
+│  │  └─ ValorisDeclarationMembre.php
+│  │
+│  ├─ Notifications/
+│  │  ├─ PointsAddedNotification.php
+│  │  ├─ GoodieOrderNotification.php
+│  │  └─ KanbanTaskNotification.php
+│  │
+│  ├─ Policies/
+│  │  ├─ KanbanPolicy.php
+│  │  ├─ ValorisPolicy.php
+│  │  └─ AdminPolicy.php
+│  │
+│  ├─ Providers/
+│  │  ├─ AppServiceProvider.php
+│  │  ├─ AuthServiceProvider.php
+│  │  └─ EventServiceProvider.php
+│  │
+│  ├─ Services/
+│  │  ├─ Auth/
+│  │  │   ├─ AzureService.php
+│  │  │   └─ KeycloakService.php
+│  │  │
+│  │  ├─ Notifications/
+│  │  │   ├─ TeamsService.php
+│  │  │   ├─ MattermostService.php
+│  │  │   └─ NotificationService.php
+│  │  │
+│  │  ├─ Storage/
+│  │  │   ├─ SharepointService.php
+│  │  │   └─ InternalStorageService.php
+│  │  │
+│  │  ├─ KanbanService.php
+│  │  ├─ PointsService.php
+│  │  ├─ ShopService.php
+│  │  └─ DeclarationService.php
+│  │
+│  └─ View/
+│      └─ Components/
+│          ├─ Layout.php
+│          └─ Sidebar.php
+│
+├─ bootstrap/
+│
+├─ config/
+│  ├─ services.php
+│  ├─ valoris.php
+│  ├─ kanban.php
+│  └─ intranet.php
+│
+├─ database/
+│  ├─ migrations/
+│  └─ seeders/
+│
+├─ docker/
+│  ├─ nginx/
+│  └─ php/
+│
+├─ docs/
+│  ├─ architecture.md
+│  ├─ database-schema.md
+│  └─ api.md
+│
+├─ public/
+│
+├─ resources/
+│  ├─ views/
+│  │  ├─ layouts/
+│  │  ├─ kanban/
+│  │  ├─ valoris/
+│  │  └─ rh/
+│  │
+│  ├─ js/
+│  └─ css/
+│
+├─ routes/
+│  ├─ web.php
+│  └─ api.php
+│
+├─ storage/
+│
+├─ tests/
+│  ├─ Feature/
+│  └─ Unit/
+│
+├─ .github/
+│  └─ workflows/
+│      ├─ ci.yml
+│      └─ deploy.yml
+│
+├─ docker-compose.yml
+├─ composer.json
+├─ package.json
+├─ README.md
+└─ artisan
+
+intranet/
 ├─ app/
 │  ├─ Console/Commands
 │  ├─ Events
