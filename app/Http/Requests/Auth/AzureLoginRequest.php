@@ -1,39 +1,24 @@
-app/Http/Requests/
-│
-├─ Auth/
-│  ├─ AzureLoginRequest.php
-│  ├─ KeycloakLoginRequest.php
-│  └─ SsoLinkRequest.php
-│
-├─ Kanban/
-│  ├─ CreateBoardRequest.php
-│  ├─ UpdateBoardRequest.php
-│  ├─ CreateTaskRequest.php
-│  ├─ UpdateTaskRequest.php
-│  ├─ MoveTaskRequest.php
-│  └─ CommentTaskRequest.php
-│
-├─ RH/
-│  ├─ CreateAbsenceRequest.php
-│  ├─ UpdateAbsenceRequest.php
-│  ├─ CreateDeclarationRequest.php
-│  ├─ UpdateDeclarationRequest.php
-│  └─ UploadDocumentRequest.php
-│
-├─ Valoris/
-│  ├─ CreateRewardRequest.php
-│  ├─ UpdateRewardRequest.php
-│  ├─ PurchaseRewardRequest.php
-│  ├─ GrantPointsRequest.php
-│  └─ TransferPointsRequest.php
-│
-├─ Admin/
-│  ├─ CreateUserRequest.php
-│  ├─ UpdateUserRequest.php
-│  ├─ AssignRoleRequest.php
-│  ├─ UpdatePermissionRequest.php
-│  └─ SystemSettingsRequest.php
-│
-└─ Outils/
-   ├─ CreateLinkRequest.php
-   └─ UpdateLinkRequest.php
+namespace App\Http\Requests\Auth;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class AzureLoginRequest extends FormRequest
+{
+    public function authorize()
+    {
+        return true;
+    }
+
+    public function rules()
+    {
+        return [
+            'id_token' => ['required','string'],
+            'access_token' => ['nullable','string'],
+            'expires_in' => ['nullable','integer'],
+            'token_type' => ['nullable','string']
+        ];
+    }
+}
+
+
+
