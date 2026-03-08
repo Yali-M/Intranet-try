@@ -1,1 +1,11 @@
+namespace App\Facades;
 
+use Illuminate\Support\Facades\Facade;
+
+class Mattermost extends Facade
+{
+    protected static function getFacadeAccessor()
+    {
+        return 'mattermost';
+    }
+}
