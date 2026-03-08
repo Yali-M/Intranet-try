@@ -1,0 +1,17 @@
+import './bootstrap';
+import('@popperjs/core');
+import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../../vendor/aliqasemzadeh/livewire-bootstrap-modal/resources/js/modals.js';
+import './echo.js';
+
+/*
+window.Echo.private(`App.Models.User.X`).
+    listen('TestEvent', (event) => {
+        console.log(event);
+    }
+);
+*/
+
+
+
+
